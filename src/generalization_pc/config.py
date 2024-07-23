@@ -4,13 +4,13 @@ import pandas as pd
 
 
 # each raytune trial will block
-raytune_gpu_per_trial = 0.5
+raytune_gpu_per_trial = 0.1
 raytune_cpu_per_trial = 2
 
 
-n_runs = 1
-max_epochs = 1
-num_samples = 2
+n_runs = 5
+max_epochs = 31
+num_samples = 8
 path_dataset = str(Path("data/tcga_cohorts_and_tumor_classification/").resolve())
 path_indices = str(Path("data/indices").resolve())
 
