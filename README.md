@@ -3,7 +3,7 @@ This repo contains code for running the experiments that compare pan-cancer mode
 
 
 ## Dataset
-A link to download the processed dataset used will be added yet.
+A link to download the processed dataset used will be added later.
 
 ## Usage
 To run the experiments, first create a new conda environment with the necessary packages. 
