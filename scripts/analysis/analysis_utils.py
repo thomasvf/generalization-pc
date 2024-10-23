@@ -294,6 +294,7 @@ class SingleModelComparisonArtifactsBuilder:
         stats_diff = stats_diff.rename(columns={"var": x, "mean": y})
 
         print(stats_diff)
+        stats_diff.to_csv(self.output_dir / "scores_diff.csv")
         fig, ax = plt.subplots()
         sns.scatterplot(data=stats_diff, x=x, y=y, ax=ax, s=85)
         ax.grid()

@@ -18,8 +18,8 @@ from analysis_utils import (
 )
 
 
-PATH_CS_WITH_PC_INDICES_RESULTS = Path("results/outputs_cs_with_pc_indices")
-PATH_PC_RESULTS = Path("results/outputs_pc")
+PATH_CS_WITH_PC_INDICES_RESULTS = Path("/home/thomas/work/mestrado/Generalization Pan-cancer/generalization_pc_data/results/outputs_cs_with_pc_indices")
+PATH_PC_RESULTS = Path("/home/thomas/work/mestrado/Generalization Pan-cancer/generalization_pc_data/results/outputs_pc")
 PATH_ARTIFACTS = Path("artifacts")
 DS_PARAMS = TCGADatasetParameters()
 path_dataset_ratios_output = PATH_ARTIFACTS / "dataset_info.csv"
@@ -114,6 +114,7 @@ def dataset_size_influence():
         left=scores_diff, right=cohort_sizes, left_on="cohort", right_index=True
     )
     print(scores_diff)
+    scores_diff.to_csv(art_builder.output_dir / "scores_diff.csv")
 
     x = "Total"
     y = "F1 Difference"
@@ -164,6 +165,7 @@ def imbalance_influence():
         left=scores_diff, right=cohort_imbalances, left_on="cohort", right_index=True
     )
     print(scores_diff)
+    scores_diff.to_csv(art_builder.output_dir / "scores_diff.csv")
 
     x = "Ratio"
     y = "F1 Difference"
