@@ -1,5 +1,5 @@
-# A Study on Pan-Cancer Generalization on Specific Tasks
-This repo contains code for running the experiments that compare pan-cancer models trained on a gene expression task against models trained with a single cohort.
+# A Study on the Generalization of Pan-cancer NN Models for Cohort-specific Predictions
+This repo contains code for running the experiments that compare pan-cancer (PC) models trained on a gene expression task against models trained with a single cohort.
 
 
 ## Dataset
