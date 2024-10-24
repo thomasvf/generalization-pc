@@ -1,4 +1,4 @@
-# A Study on the Generalization of Pan-cancer NN Models for Cohort-specific Predictions
+# Evaluating the Generalization of Neural Network-Based Pan-Cancer Classification Models for Cohort-Specific Predictions
 This repo contains code for running the experiments that compare pan-cancer (PC) models trained on a gene expression task against models trained with a single cohort.
 
 
