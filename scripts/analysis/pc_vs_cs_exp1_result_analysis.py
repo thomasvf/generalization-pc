@@ -20,7 +20,7 @@ from analysis_utils import (
 
 PATH_CS_WITH_PC_INDICES_RESULTS = Path("/home/thomas/work/mestrado/Generalization Pan-cancer/generalization_pc_data/results/outputs_cs_with_pc_indices")
 PATH_PC_RESULTS = Path("/home/thomas/work/mestrado/Generalization Pan-cancer/generalization_pc_data/results/outputs_pc")
-PATH_ARTIFACTS = Path("artifacts")
+PATH_ARTIFACTS = Path("artifacts2")
 DS_PARAMS = TCGADatasetParameters()
 path_dataset_ratios_output = PATH_ARTIFACTS / "dataset_info.csv"
 

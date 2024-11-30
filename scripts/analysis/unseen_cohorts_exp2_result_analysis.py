@@ -9,9 +9,13 @@ import matplotlib.pyplot as plt
 from scipy import stats
 
 
-PATH_CS_WITH_PC_INDICES_RESULTS = Path("results/outputs_cs_with_pc_indices")
-PATH_UNSEEN_COHORT_RESULTS = Path("results/outputs_without_target_cohorts")
-PATH_ARTIFACTS = Path("artifacts")
+PATH_CS_WITH_PC_INDICES_RESULTS = Path("/home/thomas/work/mestrado/Generalization Pan-cancer/generalization_pc_data/results/outputs_cs_with_pc_indices")
+PATH_UNSEEN_COHORT_RESULTS = Path("/home/thomas/work/mestrado/Generalization Pan-cancer/generalization_pc_data/results/outputs_without_target_cohorts")
+
+# PATH_CS_WITH_PC_INDICES_RESULTS = Path("results/outputs_cs_with_pc_indices")
+# PATH_UNSEEN_COHORT_RESULTS = Path("results/outputs_without_target_cohorts")
+
+PATH_ARTIFACTS = Path("artifacts2")
 path_dataset_ratios_output = PATH_ARTIFACTS / "dataset_info.csv"
 
 
@@ -419,11 +423,12 @@ def dataset_size_influence():
         left=scores_diff, right=cohort_sizes, left_on="cohort", right_index=True
     )
     print(scores_diff)
+    scores_diff.to_csv(art_builder.output_dir / "scatter_scores_sample_size_data.csv")
 
     x = "Total"
     y = "F1 Difference"
     fig, ax = plt.subplots()
-    sns.scatterplot(data=scores_diff, x=x, y=y, ax=ax)
+    sns.scatterplot(data=scores_diff, x=x, y=y, ax=ax, s=70)
     ax.grid()
     fig.savefig(art_builder.output_dir / "scatter_scores_sample_size.jpg")
     fig.savefig(art_builder.output_dir / "scatter_scores_sample_size.pdf")
@@ -471,11 +476,12 @@ def imbalance_influence():
         left=scores_diff, right=cohort_imbalances, left_on="cohort", right_index=True
     )
     print(scores_diff)
+    scores_diff.to_csv(art_builder.output_dir / "scatter_scores_imbalance_data.csv")
 
     x = "Ratio"
     y = "F1 Difference"
     fig, ax = plt.subplots()
-    sns.scatterplot(data=scores_diff, x=x, y=y, ax=ax)
+    sns.scatterplot(data=scores_diff, x=x, y=y, ax=ax, s=85)
     ax.grid()
     ax.set_xlabel("Imbalance Ratio")
     fig.savefig(art_builder.output_dir / "scatter_scores_imbalance.jpg")
