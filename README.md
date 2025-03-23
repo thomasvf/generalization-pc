@@ -27,7 +27,7 @@ If you find this code useful, consider citing the paper:
 ```bibtex
 @inproceedings{fontanari2024pcgeneralization,
  author = {Thomas Fontanari and Mariana Recamonde-Mendoza},
-    title = { Evaluating the Generalization of Neural Network-Based Pan-Cancer Classification Models for Cohort-Specific Predictions},
+    title = {Evaluating the Generalization of Neural Network-Based Pan-Cancer Classification Models for Cohort-Specific Predictions},
     booktitle = {Anais do XVII Simpósio Brasileiro de Bioinformática},
     location = {Vitória/ES},
     year = {2024},
