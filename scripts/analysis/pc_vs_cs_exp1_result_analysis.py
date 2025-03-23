@@ -18,9 +18,9 @@ from analysis_utils import (
 )
 
 
-PATH_CS_WITH_PC_INDICES_RESULTS = Path("/home/thomas/work/mestrado/Generalization Pan-cancer/generalization_pc_data/results/outputs_cs_with_pc_indices")
-PATH_PC_RESULTS = Path("/home/thomas/work/mestrado/Generalization Pan-cancer/generalization_pc_data/results/outputs_pc")
-PATH_ARTIFACTS = Path("artifacts2")
+PATH_CS_WITH_PC_INDICES_RESULTS = Path("results/outputs_cs_with_pc_indices")
+PATH_PC_RESULTS = Path("results/outputs_pc")
+PATH_ARTIFACTS = Path("artifacts")
 DS_PARAMS = TCGADatasetParameters()
 path_dataset_ratios_output = PATH_ARTIFACTS / "dataset_info.csv"
 
@@ -125,7 +125,7 @@ def dataset_size_influence():
     fig.savefig(art_builder.output_dir / "scatter_scores_sample_size.pdf")
 
     corr_result = stats.pearsonr(scores_diff[x], scores_diff[y])
-    print("Pearson R: {}".format(corr_result))
+    print("Size Pearson R: {}".format(corr_result))
 
 
 def imbalance_influence():
@@ -177,7 +177,7 @@ def imbalance_influence():
     fig.savefig(art_builder.output_dir / "scatter_scores_imbalance.pdf")
 
     corr_result = stats.pearsonr(scores_diff[x], scores_diff[y])
-    print("Pearson R: {}".format(corr_result))
+    print("Imbalance Pearson R: {}".format(corr_result))
 
 
 def compare_models():

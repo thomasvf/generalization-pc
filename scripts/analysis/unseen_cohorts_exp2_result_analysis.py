@@ -9,11 +9,8 @@ import matplotlib.pyplot as plt
 from scipy import stats
 
 
-PATH_CS_WITH_PC_INDICES_RESULTS = Path("/home/thomas/work/mestrado/Generalization Pan-cancer/generalization_pc_data/results/outputs_cs_with_pc_indices")
-PATH_UNSEEN_COHORT_RESULTS = Path("/home/thomas/work/mestrado/Generalization Pan-cancer/generalization_pc_data/results/outputs_without_target_cohorts")
-
-# PATH_CS_WITH_PC_INDICES_RESULTS = Path("results/outputs_cs_with_pc_indices")
-# PATH_UNSEEN_COHORT_RESULTS = Path("results/outputs_without_target_cohorts")
+PATH_CS_WITH_PC_INDICES_RESULTS = Path("results/outputs_cs_with_pc_indices")
+PATH_UNSEEN_COHORT_RESULTS = Path("results/outputs_without_target_cohorts")
 
 PATH_ARTIFACTS = Path("artifacts2")
 path_dataset_ratios_output = PATH_ARTIFACTS / "dataset_info.csv"
@@ -335,7 +332,7 @@ class SingleModelComparisonArtifactsBuilder:
             fig.savefig(self.output_dir / f"{score_name}_perf_vs_var.pdf")
 
         corr_result = stats.pearsonr(stats_diff[x], stats_diff[y])
-        print("Variance Influence Pearson R: {}".format(corr_result))
+        print("Performance vs Variance Decrease Pearson R: {}".format(corr_result))
 
     def get_pc_sample_counts(self, run=0):
         counts = self.pc_results.build_samples_per_run_table()[run]
@@ -434,7 +431,7 @@ def dataset_size_influence():
     fig.savefig(art_builder.output_dir / "scatter_scores_sample_size.pdf")
 
     corr_result = stats.pearsonr(scores_diff[x], scores_diff[y])
-    print("Dataset Influence Pearson R: {}".format(corr_result))
+    print("Size Influence Pearson R: {}".format(corr_result))
 
 
 def imbalance_influence():

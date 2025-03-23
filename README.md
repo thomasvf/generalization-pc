@@ -3,7 +3,10 @@ This repo contains code for running the experiments that compare pan-cancer (PC)
 
 
 ## Dataset
-A link to download the processed dataset used will be added later.
+The dataset and the indices for each experiment can be downloaded [here](https://www.dropbox.com/scl/fi/981azce85uj9sy2dmixek/data_pc.tar.gz?rlkey=fahi3yakgylo86hv4s001x3bo&st=0ve0dnoy&dl=0).
+
+
+The results, including fitted models for each run, can be downloaded [here](https://www.dropbox.com/scl/fi/nr0ktuqx1dnjzkmvgcbsx/results_pc_generalization.tar.gz?rlkey=lcxsn08jyd2529ve2o45omh68&st=1ywytppp&dl=0)
 
 ## Usage
 To run the experiments, first create a new conda environment with the necessary packages. 

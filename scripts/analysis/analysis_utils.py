@@ -303,7 +303,7 @@ class SingleModelComparisonArtifactsBuilder:
             fig.savefig(self.output_dir / f"{score_name}_perf_vs_var.pdf")
 
         corr_result = stats.pearsonr(stats_diff[x], stats_diff[y])
-        print("Pearson R: {}".format(corr_result))
+        print("Performance vs Variance Pearson R: {}".format(corr_result))
 
     def get_pc_sample_counts(self, run=0):
         counts = self.pc_results.build_samples_per_run_table()[run]
